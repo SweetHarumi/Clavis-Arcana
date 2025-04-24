@@ -3,66 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <title>Carta da Harumi</title>
-  <style>
-    body {
-      background: linear-gradient(to bottom, #0a0a23, #1e1e40);
-      color: #fff;
-      font-family: 'Georgia', serif;
-      text-align: center;
-      padding: 50px;
-    }
-
-    .card {
-      perspective: 1000px;
-      width: 300px;
-      height: 400px;
-      margin: auto;
-    }
-
-    .card-inner {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      transition: transform 1.5s;
-      transform-style: preserve-3d;
-    }
-
-    .card:hover .card-inner {
-      transform: rotateY(180deg);
-    }
-
-    .card-front, .card-back {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      backface-visibility: hidden;
-      border: 2px solid #fff;
-      border-radius: 16px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      background: #2e2e5e;
-      padding: 20px;
-      box-shadow: 0 0 20px #9e70ff;
-    }
-
-    .card-back {
-      transform: rotateY(180deg);
-      background: #443377;
-    }
-  </style>
+  <link rel="stylesheet" href="harumi.css">
 </head>
 <body>
-  <div class="card">
-    <div class="card-inner">
-      <div class="card-front">
-        <h2>🌙 Carta da Harumi</h2>
-      </div>
-      <div class="card-back">
-        <h3>Bem-vinda ao Clavis Arcana</h3>
-        <p>Você foi escolhida como a Sacerdotisa do nosso destino estelar... ✨</p>
-      </div>
+  <div class="envelope">
+    <input type="checkbox" id="open" class="toggle">
+    <label for="open" class="envelope-front"></label>
+    <div class="envelope-content">
+      <h2>🌙 Bem-vinda ao Clavis Arcana</h2>
+      <p>Você foi escolhida como a Sacerdotisa... a guardiã do véu entre os mundos.</p>
+      <img src="harumi-tarot.png" alt="Carta da Harumi" class="tarot-card">
     </div>
   </div>
 </body>
