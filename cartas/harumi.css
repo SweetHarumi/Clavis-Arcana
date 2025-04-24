@@ -1,48 +1,63 @@
 body {
-  background: linear-gradient(to bottom, #0a0a23, #1e1e40);
-  color: #fff;
-  font-family: 'Georgia', serif;
-  text-align: center;
-  padding: 50px;
-}
-
-.card {
-  perspective: 1000px;
-  width: 300px;
-  height: 400px;
-  margin: auto;
-}
-
-.card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transition: transform 1.5s;
-  transform-style: preserve-3d;
-  cursor: pointer;
-}
-
-.card:hover .card-inner {
-  transform: rotateY(180deg);
-}
-
-.card-front, .card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  border: 2px solid #fff;
-  border-radius: 16px;
+  background: linear-gradient(#1e1e2e, #0e0e1a);
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  background: #2e2e5e;
-  padding: 20px;
-  box-shadow: 0 0 20px #9e70ff;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Georgia', serif;
+  color: #fff;
 }
 
-.card-back {
+.envelope {
+  position: relative;
+  width: 400px;
+  height: 250px;
+  perspective: 1000px;
+}
+
+.toggle {
+  display: none;
+}
+
+.envelope-front {
+  width: 100%;
+  height: 100%;
+  background: url('envelope-texture.jpg') center/cover no-repeat;
+  border: 3px solid #d4b89b;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 1s ease-in-out;
+  transform-origin: left;
+  display: block;
+}
+
+.toggle:checked + .envelope-front {
+  transform: rotateY(-180deg);
+}
+
+.envelope-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background: #3b2b2f;
+  border-radius: 8px;
   transform: rotateY(180deg);
-  background: #443377;
+  backface-visibility: hidden;
+  box-shadow: inset 0 0 20px rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.tarot-card {
+  width: 180px;
+  margin-top: 20px;
+  border: 2px solid #fff;
+  border-radius: 12px;
 }
