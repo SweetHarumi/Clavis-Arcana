@@ -20,7 +20,7 @@ body {
 
 .tarot-card {
   aspect-ratio: 3 / 4; /* Garante proporção da carta */
-  width: min(90vw, 600px); /* Responsivo e com limite */
+  width: min(90vw, 1080px); /* Responsivo e com limite */
   margin: 5vh auto;
   background: linear-gradient(145deg, #261c35, #1c1329);
   border: 5px double #d3bfa7;
