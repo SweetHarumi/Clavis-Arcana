@@ -1,9 +1,8 @@
 body {
-  background: #fdf7ec;
-  font-family: 'Georgia', serif;
-  color: #3b2f2f;
   margin: 0;
   height: 100vh;
+  background: linear-gradient(to bottom, #fdf6e3, #f1e3c6);
+  font-family: 'Georgia', serif;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -11,59 +10,52 @@ body {
 }
 
 .envelope {
-  width: 600px;
-  height: 800px;
-  background: #fff6e0;
-  border: 2px solid #a38c5a;
+  background: #fff8dc;
+  border: 2px solid #c2b280;
+  border-radius: 20px;
   padding: 40px;
-  border-radius: 12px;
-  animation: revelarCarta 2s ease-out forwards;
+  width: 500px;
+  box-shadow: 0 0 20px #d6c27a, 0 0 40px #f0e68c;
+  transform: scale(0.9) rotateX(45deg);
   opacity: 0;
-  transform: scale(0.9) rotateX(40deg);
+  animation: abrirCarta 2s ease-out forwards;
 }
 
-@keyframes revelarCarta {
+@keyframes abrirCarta {
   to {
-    opacity: 1;
     transform: scale(1) rotateX(0deg);
+    opacity: 1;
   }
 }
 
 .magia {
-  font-size: 2.5em;
+  font-size: 2em;
+  color: #6a4e99;
   text-align: center;
-  color: #754ca5;
-  animation: brilhoMagico 2s infinite alternate;
+  animation: brilho 2s infinite alternate;
 }
 
 .mensagem {
-  font-size: 1.2em;
-  margin-top: 40px;
+  font-size: 1.1em;
   text-align: center;
-  animation: fadeIn 3s ease-in;
+  margin-top: 30px;
 }
 
 .convite {
   display: block;
-  margin-top: 60px;
   text-align: center;
-  font-size: 1.5em;
+  margin-top: 40px;
+  font-size: 1.3em;
+  color: #a36cf2;
   text-decoration: none;
-  color: #9b59b6;
-  animation: brilhoMagico 2s infinite alternate;
-  transition: transform 0.2s;
+  animation: brilho 2s infinite alternate;
 }
 
-.convite:hover {
-  transform: scale(1.05);
-}
-
-@keyframes brilhoMagico {
-  from { text-shadow: 0 0 4px #9b59b6; }
-  to { text-shadow: 0 0 12px #9b59b6, 0 0 20px #fbe8ff; }
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(40px); }
-  to { opacity: 1; transform: translateY(0); }
+@keyframes brilho {
+  from {
+    text-shadow: 0 0 5px #a36cf2;
+  }
+  to {
+    text-shadow: 0 0 15px #ddbaff, 0 0 25px #f5eaff;
+  }
 }
