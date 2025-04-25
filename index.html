@@ -1,16 +1,32 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <title>Clavis Arcana</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VTubers Mágicas</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>🔮 Bem-vinda ao Clavis Arcana 🔮</h1>
-  <p>Clique em uma carta para revelá-la:</p>
-  <ul>
-    <li><a href="cartas/harumi.html">🌙 Carta da Harumi</a></li>
-    <li><a href="cartas/neekotina.html">🍯 Carta da Neekotina</a></li>
-  </ul>
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+    
+    <main class="container">
+        <h1 class="title">Escolha sua VTuber</h1>
+        
+        <div class="vtuber-grid">
+            <a href="harumi.html" class="vtuber-name" data-name="Harumi">
+                <span>H</span><span>A</span><span>R</span><span>U</span><span>M</span><span>I</span>
+            </a>
+            <!-- Adicione mais VTubers aqui seguindo o mesmo padrão -->
+            <a href="#" class="vtuber-name" data-name="VTuber2">
+                <span>V</span><span>T</span><span>u</span><span>b</span><span>e</span><span>r</span><span>2</span>
+            </a>
+            <a href="#" class="vtuber-name" data-name="VTuber3">
+                <span>V</span><span>T</span><span>u</span><span>b</span><span>e</span><span>r</span><span>3</span>
+            </a>
+        </div>
+    </main>
+
+    <script src="animations.js"></script>
 </body>
 </html>
