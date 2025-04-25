@@ -42,8 +42,8 @@ body {
 .title {
   font-size: 3.2rem;
   text-align: center;
-  color: #b8b5b5;
-  text-shadow: 0 0 10px #666666;
+  color: #acabab;
+  text-shadow: 0 0 10px #454545;
 }
 
 .invitation {
@@ -57,7 +57,7 @@ body {
   display: block;
   margin: 40px auto 0;
   padding: 14px 28px;
-  background: linear-gradient(145deg, #8c65c0, #5a348e);
+  background: linear-gradient(145deg, #454545, #acabab);
   border: none;
   border-radius: 12px;
   color: white;
