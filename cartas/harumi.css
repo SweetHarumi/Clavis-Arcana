@@ -11,7 +11,7 @@ body {
   height: 90vh;
   margin: 5vh auto;
   padding: 3rem;
-  background: src= "sounds/pergaminho-textura" no-repeat center center;
+  background: url('img/pergaminho-textura.png') no-repeat center center;
   background-size: cover;
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
   border-radius: 30px;
