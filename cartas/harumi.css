@@ -1,63 +1,69 @@
 body {
-  background: linear-gradient(#1e1e2e, #0e0e1a);
+  background: #fdf7ec;
+  font-family: 'Georgia', serif;
+  color: #3b2f2f;
+  margin: 0;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  margin: 0;
-  font-family: 'Georgia', serif;
-  color: #fff;
+  overflow: hidden;
 }
 
 .envelope {
-  position: relative;
-  width: 400px;
-  height: 250px;
-  perspective: 1000px;
-}
-
-.toggle {
-  display: none;
-}
-
-.envelope-front {
-  width: 100%;
-  height: 100%;
-  background: url('envelope-texture.jpg') center/cover no-repeat;
-  border: 3px solid #d4b89b;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: transform 1s ease-in-out;
-  transform-origin: left;
-  display: block;
-}
-
-.toggle:checked + .envelope-front {
-  transform: rotateY(-180deg);
-}
-
-.envelope-content {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  padding: 20px;
-  background: #3b2b2f;
-  border-radius: 8px;
-  transform: rotateY(180deg);
-  backface-visibility: hidden;
-  box-shadow: inset 0 0 20px rgba(0,0,0,0.5);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.tarot-card {
-  width: 180px;
-  margin-top: 20px;
-  border: 2px solid #fff;
+  width: 600px;
+  height: 800px;
+  background: #fff6e0;
+  border: 2px solid #a38c5a;
+  padding: 40px;
   border-radius: 12px;
+  animation: revelarCarta 2s ease-out forwards;
+  opacity: 0;
+  transform: scale(0.9) rotateX(40deg);
+}
+
+@keyframes revelarCarta {
+  to {
+    opacity: 1;
+    transform: scale(1) rotateX(0deg);
+  }
+}
+
+.magia {
+  font-size: 2.5em;
+  text-align: center;
+  color: #754ca5;
+  animation: brilhoMagico 2s infinite alternate;
+}
+
+.mensagem {
+  font-size: 1.2em;
+  margin-top: 40px;
+  text-align: center;
+  animation: fadeIn 3s ease-in;
+}
+
+.convite {
+  display: block;
+  margin-top: 60px;
+  text-align: center;
+  font-size: 1.5em;
+  text-decoration: none;
+  color: #9b59b6;
+  animation: brilhoMagico 2s infinite alternate;
+  transition: transform 0.2s;
+}
+
+.convite:hover {
+  transform: scale(1.05);
+}
+
+@keyframes brilhoMagico {
+  from { text-shadow: 0 0 4px #9b59b6; }
+  to { text-shadow: 0 0 12px #9b59b6, 0 0 20px #fbe8ff; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
 }
